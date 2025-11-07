@@ -1,0 +1,97 @@
+LAB 1
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    cout << "Valid element: " << numbers[2] << endl;  // valid access
+    cout << "Invalid element: " << numbers[5] << endl; // out of bounds!
+
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50};
+    int index;
+
+    cout << "Enter an index (0–4): ";
+    cin >> index;
+
+    if (index >= 0 && index < 5)
+        cout << "Element at index " << index << " is " << numbers[index] << endl;
+    else
+        cout << "Error: Index out of range!" << endl;
+
+    return 0;
+}
+
+
+LAB 2 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    double sales[5] = {12.25, 32.50, 16.90, 23.00, 45.68};
+
+    cout << "Sales values:" << endl;
+    int size = sizeof(sales) / sizeof(sales[0]);
+
+    double total = 0;
+
+    for (int i = 0; i < size; i++) {
+        cout << sales[i] << " ";
+        total += sales[i];
+    }
+
+    cout << endl;
+
+    double average = total / size;
+    cout << "Average sales = " << average << endl;
+
+    return 0;
+}
+
+LAB 3 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int list1[10] = {0};
+    int list2[10] = {8, 5, 12};
+    int list3[3]  = {5, 6, 3};
+    int list4[25] = {4, 7};
+
+    cout << "Values in list1: ";
+    for (int i = 0; i < 10; i++)
+        cout << list1[i] << " ";
+    cout << endl;
+
+    cout << "Values in list2: ";
+    for (int i = 0; i < 10; i++)
+        cout << list2[i] << " ";
+    cout << endl;
+
+    cout << "Values in list3: ";
+    for (int i = 0; i < 3; i++)
+        cout << list3[i] << " ";
+    cout << endl;
+
+    cout << "Values in list4: ";
+    for (int i = 0; i < 25; i++)
+        cout << list4[i] << " ";
+    cout << endl;
+
+    return 0;
+}
+
+
